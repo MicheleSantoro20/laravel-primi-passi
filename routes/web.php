@@ -14,5 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+    $data= [
+        'img'=> 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png',
+        'hello'=> 'Hello World!'
+    ];
+
+    return view('home',$data,);
+})->name('homepage');
+Route::get('about', function () {
+
+
+
+    $data= [
+        'img'=> 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png',
+        'txt'=> 'Redirect page...'
+    ];
+
+    return view('about',$data,);
+})->name('redirect');
